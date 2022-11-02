@@ -1,5 +1,5 @@
-const {ApolloServer} = require('apollo-server');
-const {ApolloGateway} = require('@apollo/gateway');
+const { ApolloServer } = require('apollo-server');
+const { ApolloGateway } = require('@apollo/gateway');
 require('dotenv').config();
 
 const gateway = new ApolloGateway();
@@ -10,7 +10,7 @@ const server = new ApolloServer({
 
 server
   .listen()
-  .then(({url}) => {
+  .then(({ url }) => {
     console.log(`🚀 Gateway ready at ${url}`);
   })
   .catch(err => {

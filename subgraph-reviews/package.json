@@ -4,15 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon . -e js,graphql"
+    "start": "nodemon . -e js,graphql",
+    "rover:publish": "rover subgraph introspect http://localhost:4002/graphql | rover subgraph publish %APOLLO_GRAPH_REF% --name reviews --routing-url http://localhost:4002 --schema -"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/subgraph": "^2.1.3",
     "apollo-server": "^3.7.0",
     "fs": "0.0.1-security",
     "graphql": "^16.0.0",
+    "graphql-import-files": "^1.0.18",
     "nodemon": "^2.0.13"
+  },
+  "devDependencies": {
+    "@apollo/rover": "^0.9.1"
   }
 }

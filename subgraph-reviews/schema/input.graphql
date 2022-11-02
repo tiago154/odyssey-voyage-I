@@ -1,0 +1,8 @@
+input LocationReviewInput {
+  "Written text"
+  comment: String!
+  "A number from 1 - 5 with 1 being lowest and 5 being highest"
+  rating: Int!
+  "Location Id"
+  locationId: String!
+}

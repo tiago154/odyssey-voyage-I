@@ -1,0 +1,4 @@
+type Query {
+  "The three latest reviews submitted for FlyBy's locations"
+  latestReviews: [Review!]!
+}
